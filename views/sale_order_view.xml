@@ -5,11 +5,12 @@
         <!--Inherit the sale order form view-->
         <record id="view_sale_order_custom" model="ir.ui.view">
             <field name="name">sale.order.custom.form.inherited</field>
-            <field name="model">sale.order</field>                              <!--added model {sale.order} that we work with. -->
-            <field name="inherit_id" ref="sale.view_order_form"/>               <!--inherit view {sale.view_order_form}-->
+            <field name="model">sale.order</field>
+            <field name="groups_id" eval="[(4,ref('group_test'))]"/>
+            <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='partner_id']" position="after">     <!--point at {partner_id} field then put custom field after it. -->
-                    <field name="test"/>                                        <!--added custom field named{test}.-->
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="test" />
                 </xpath>
             </field>
         </record>

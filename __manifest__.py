@@ -15,7 +15,9 @@
     'depends': ['sale'],
 
     'data': [
-        'views/sale_order_view.xml'
+        'views/sale_order_view.xml',
+        'security/ir.model.access.csv',
+        'security/security.xml'
     ],
 
     'demo': [],
