@@ -16,6 +16,7 @@
 
     'data': [
         'views/sale_order_view.xml',
+        'views/sale_order_line.xml',
         'security/ir.model.access.csv',
         'security/security.xml',
         'report/sale_report_inherit.xml',
