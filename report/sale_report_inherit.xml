@@ -5,10 +5,20 @@
     <template id="sale_report_template_inherit" inherit_id="sale.report_saleorder_document">
         <xpath expr="//div [@t-if='doc.user_id.name']" position="after">
             <div t-if="doc.test" class="col-auto col-3 mw-100 mb-2">
-                    <strong>Test:</strong>
-                    <p class="m-0" t-field="doc.test"/>
-                </div>
-        </xpath>-->
+                <strong>Test:</strong>
+                <p class="m-0" t-field="doc.test"/>
+            </div>
+        </xpath>
 
+        <xpath expr="//th [@name='th_quantity']" position="before">
+            <th name="th_test" class="text-right">Test</th>
+        </xpath>
+
+        <xpath expr="//td [@name='td_quantity']" position="before">
+            <td name="td_test" class="text-right">
+                <span t-field="line.test"/>
+            </td>
+        </xpath>
     </template>
+
 </odoo>
